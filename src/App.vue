@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <a :key="n" :href="'https://picsum.photos/seed/picsum/800/900'"  v-for="n in 9" v-lightbox>
+      <img :src="'https://picsum.photos/seed/picsum/300/300'">
+    </a>
+
+  <lightbox></lightbox>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Lightbox from './components/lightbox/Lightbox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Lightbox
   }
 }
 </script>
